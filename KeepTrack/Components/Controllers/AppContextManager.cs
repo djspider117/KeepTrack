@@ -2,23 +2,12 @@
 using KeepTrack.Data;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
 namespace KeepTrack.Components.Controllers
 {
-    public interface IAppContextManager
-    {
-        IKTAppContext Context { get; set; }
-
-        Task LoadAsync();
-        Task SaveAsync();
-    }
-
     public class AppContextManager : IAppContextManager
     {
         public const string APP_DB_PATH = "data.json";
@@ -60,7 +49,6 @@ namespace KeepTrack.Components.Controllers
 
             Context = context ?? throw new KTException("APpContext is null.");
         }
-
         public async Task SaveAsync()
         {
             if (Context == null)
