@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Components\Controllers\AppLoader.cs" />
     <Compile Include="Components\ViewModels\Data\KTActivityTypeViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTIconViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTProjectViewModel.cs" />
