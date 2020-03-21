@@ -5,11 +5,28 @@
     xmlns:local="using:KeepTrack.Components.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock Text="Loading..." FontWeight="Light" FontSize="20"/>
-        <ProgressRing  Margin="0,30,0,0"/>
-    </StackPanel>
+    <Grid>
+        <controls:ImageEx Source="https://picsum.photos/1920/1080" 
+                          Stretch="UniformToFill"/>
+
+        <Border VerticalAlignment="Center" 
+                    HorizontalAlignment="Stretch">
+            <Border.Background>
+                <AcrylicBrush TintOpacity="0.25"/>
+            </Border.Background>
+            
+            <StackPanel VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Padding="0,30"
+                    Orientation="Horizontal">
+                <ProgressRing IsActive="True"/>
+                <TextBlock Text="Loading..." FontWeight="Light" FontSize="25" Margin="10,0,0,0"/>
+            </StackPanel>
+        </Border>
+        
+    </Grid>
 </Page>

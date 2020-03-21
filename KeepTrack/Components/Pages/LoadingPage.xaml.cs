@@ -29,7 +29,7 @@ namespace KeepTrack.Components.Pages
         {
             Loaded -= LoadingPage_Loaded;
             await AppLoader.Instance.InitializeAsync();
-            await Task.Delay(750);
+            await Task.Delay(1750);
 
             Frame.Navigate(typeof(MainPage));
         }
