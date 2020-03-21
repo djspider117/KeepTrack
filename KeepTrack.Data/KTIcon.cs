@@ -6,6 +6,7 @@ namespace KeepTrack.Data
     public class KTIcon : IIdentifiable
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public KTIconType Type { get; set; }
         public string IconString { get; set; }
         public string CustomFontName { get; set; }

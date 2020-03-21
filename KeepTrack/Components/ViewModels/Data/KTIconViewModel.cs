@@ -6,6 +6,11 @@ namespace KeepTrack.Components.ViewModels.Data
 {
     public class KTIconViewModel : IdentifiableViewModel<KTIcon>
     {
+        public string Name
+        {
+            get { return Model.Name; }
+            set { Model.Name = value; OnPropertyChanged(nameof(Name)); }
+        }
 
         public KTIconType Type
         {
@@ -13,13 +18,11 @@ namespace KeepTrack.Components.ViewModels.Data
             set { Model.Type = value; OnPropertyChanged(nameof(Type)); }
         }
 
-
         public string IconString
         {
             get { return Model.IconString; }
             set { Model.IconString = value; OnPropertyChanged(nameof(IconString)); }
         }
-
 
         public string CustomFontName
         {
