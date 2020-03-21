@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GhostCore;
+using KeepTrack.Components.ViewModels.Data;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,16 +19,12 @@ namespace KeepTrack.Components.Pages
 {
     public sealed partial class SettingsPage : Page
     {
+        public KTRuntimeAppContext Context { get; set; }
+
         public SettingsPage()
         {
+            Context = ServiceLocator.Instance.Resolve<KTRuntimeAppContext>();
             InitializeComponent();
-        }
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-
-
         }
     }
 }

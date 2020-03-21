@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KeepTrack.Components.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,7 +30,10 @@ namespace KeepTrack
 
         private void nvMainNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs e)
         {
-
+            if (e.IsSettingsSelected)
+            {
+                contentFrame.Navigate(typeof(SettingsPage));
+            }
         }
     }
 }
