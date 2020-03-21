@@ -93,7 +93,7 @@ namespace KeepTrack.Components.Controllers
         public Task SaveAsync()
         {
             // do nothing
-            return Task.CompletedTask
+            return Task.CompletedTask;
         }
     }
 }
