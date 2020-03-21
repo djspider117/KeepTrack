@@ -13,9 +13,12 @@ namespace KeepTrack.Components.Controllers
 
         public Task LoadAsync()
         {
-            var ctx = new KTAppContext();
             int globalIndex = 0;
 
+            var ctx = new KTAppContext();
+            ctx.Tasks = new List<KTTask>();
+            ctx.Timelines = new List<KTTimeline>();
+            ctx.TimeEvents = new List<KTTimeEvent>();
 
             ctx.Icons = new List<KTIcon>()
             {

@@ -123,6 +123,9 @@
     <Compile Include="Components\Controllers\AppLoader.cs" />
     <Compile Include="Components\Controllers\TestAppContextManager.cs" />
     <Compile Include="Components\Controllers\IAppContextManager.cs" />
+    <Compile Include="Components\Pages\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Components\Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -133,7 +136,7 @@
     <Compile Include="Components\ViewModels\Data\KTTaskViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTTimeEventViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTTimelineViewModel.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Components\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,11 +161,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Components\Pages\LoadingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Components\Pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

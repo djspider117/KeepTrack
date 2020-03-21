@@ -1,4 +1,5 @@
 ﻿using KeepTrack.Components.Controllers;
+using KeepTrack.Components.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,9 +44,6 @@ namespace KeepTrack
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
-            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
-            coreTitleBar.ExtendViewIntoTitleBar = true;
-
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
@@ -71,10 +69,8 @@ namespace KeepTrack
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(LoadingPage), e.Arguments);
                 }
-
-                await AppLoader.Instance.InitializeAsync();
 
                 // Ensure the current window is active
                 Window.Current.Activate();
