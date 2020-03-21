@@ -31,6 +31,25 @@ namespace GhostCore.Collections
             _modelCollection = modelCollection;
         }
 
+        public static ViewModelCollection<TViewModel, TModel> CreateInitializedCollection<TViewModel, TModel>(IList<TModel> src) where TViewModel : ViewModelBase<TModel>
+        {
+            if (src == null)
+            {
+                return new ViewModelCollection<TViewModel, TModel>();
+            }
+
+            var lst = new List<TViewModel>();
+            var type = typeof(TViewModel);
+            var ctor = type.GetConstructor(new Type[] { typeof(TModel) });
+
+            foreach (var item in src)
+            {
+                var obj = ctor.Invoke(new object[] { item });
+                lst.Add(obj as TViewModel);
+            }
+            return new ViewModelCollection<TViewModel, TModel>(src, lst);
+        }
+
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             base.OnCollectionChanged(e);
