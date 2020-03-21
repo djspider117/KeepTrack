@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace KeepTrack.Components.Controllers
 {
 
-    public class TextAppContextManger : IAppContextManager
+    public class TestAppContextManager : IAppContextManager
     {
         public IKTAppContext Context { get; set; }
 
