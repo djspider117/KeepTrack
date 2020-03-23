@@ -36,7 +36,11 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Button x:Name="btnAddIcon" Content="Options">
+        <Button x:Name="btnAddIcon" 
+                Content="Options" 
+                BorderThickness="1"
+                FontSize="15"
+                Padding="20,7">
             <Button.Flyout>
                 <MenuFlyout Placement="RightEdgeAlignedTop">
                     <MenuFlyoutItem Text="Create Activity Type">
