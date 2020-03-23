@@ -28,21 +28,9 @@
         <Button Content="Options">
             <Button.Flyout>
                 <MenuFlyout Placement="RightEdgeAlignedTop">
-                    <MenuFlyoutItem Text="Create Icon">
-                        <MenuFlyoutItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE109;" />
-                        </MenuFlyoutItem.Icon>
-                    </MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Edit Selected" IsEnabled="False">
-                        <MenuFlyoutItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE104;" />
-                        </MenuFlyoutItem.Icon>
-                    </MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Delete Selected" IsEnabled="False">
-                        <MenuFlyoutItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE107;" />
-                        </MenuFlyoutItem.Icon>
-                    </MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Create Icon" Icon="Add" />
+                    <MenuFlyoutItem Text="Edit Selected" IsEnabled="False" Icon="Edit"/>
+                    <MenuFlyoutItem Text="Delete Selected" IsEnabled="False" Icon="Delete"/>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
