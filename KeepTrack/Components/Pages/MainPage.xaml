@@ -7,17 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
+    RequestedTheme="Dark"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
     <Grid>
         <controls:ImageEx Source="https://picsum.photos/1920/1080" 
                           Stretch="UniformToFill"/>
         <NavigationView x:Name="nvMainNav"
-                    PaneTitle="Menu"
-                    AlwaysShowHeader="True"
-                    SelectionChanged="nvMainNav_SelectionChanged">
+                        PaneTitle="Menu"
+                        SelectionChanged="nvMainNav_SelectionChanged">
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Play" Content="Menu Item1" />
+                <NavigationViewItem Icon="Calendar" Content="Time Tracking" Tag="time_track"/>
+                <NavigationViewItem Content="Projects" Tag="projects">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEBC6;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
             </NavigationView.MenuItems>
 
             <Frame x:Name="contentFrame"/>

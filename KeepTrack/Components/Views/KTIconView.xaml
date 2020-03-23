@@ -1,0 +1,37 @@
+﻿<UserControl
+    x:Class="KeepTrack.Components.Views.KTIconView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KeepTrack.Components.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:templateselectors="using:KeepTrack.Components.TemplateSelectors"
+    xmlns:data="using:KeepTrack.Components.ViewModels.Data"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    <UserControl.Resources>
+        <DataTemplate x:Key="DefaultFontIconTemplate" x:DataType="data:KTIconViewModel">
+            <TextBlock Text="{x:Bind IconString, Mode=OneWay}" 
+                       FontFamily="{ThemeResource SymbolThemeFontFamily}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="CustomFontIconTemplate" x:DataType="data:KTIconViewModel">
+            <TextBlock Text="{x:Bind IconString, Mode=OneWay}" 
+                       FontFamily="{x:Bind CustomFontName, Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="ImageIconTemplate" x:DataType="data:KTIconViewModel">
+            <Image Source="{Binding CustomImagePath, Mode=OneWay}" />
+        </DataTemplate>
+
+        <templateselectors:KTIconTypeTemplateSelector x:Key="KTIconTypeTemplateSelector"
+                                                      DefaultFontIconTemplate="{StaticResource DefaultFontIconTemplate}" 
+                                                      ImageTemplate="{StaticResource ImageIconTemplate}"
+                                                      CustomFontIconTemplate="{StaticResource CustomFontIconTemplate}"/>
+    </UserControl.Resources>
+
+    <ContentControl Content="{x:Bind ViewModel, Mode=OneWay}"
+                    ContentTransitions="{x:Bind ContentTransition, Mode=OneTime}"
+                    ContentTemplateSelector="{StaticResource KTIconTypeTemplateSelector}" />
+</UserControl>

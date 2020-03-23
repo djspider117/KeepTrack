@@ -6,6 +6,8 @@ namespace KeepTrack.Components.ViewModels.Data
 {
     public class KTIconViewModel : IdentifiableViewModel<KTIcon>
     {
+        public static KTIconViewModel Default { get; private set; } = new KTIconViewModel(new KTIcon { Name = "Default", IconString = "\uECAA", Type = KTIconType.MDLFontIcon });
+
         public string Name
         {
             get { return Model.Name; }

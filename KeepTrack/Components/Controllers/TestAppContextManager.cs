@@ -22,13 +22,13 @@ namespace KeepTrack.Components.Controllers
 
             ctx.Icons = new List<KTIcon>()
             {
-                new KTIcon { Id = 0, Name = "devtools", Type = KTIconType.MDLFontIcon, IconString = "\uEC7A;" },
-                new KTIcon { Id = 0, Name = "design", Type = KTIconType.MDLFontIcon, IconString = "\uEB3C;" },
-                new KTIcon { Id = 0, Name = "manage", Type = KTIconType.MDLFontIcon, IconString = "\uE178;" },
-                new KTIcon { Id = 0, Name = "insider", Type = KTIconType.MDLFontIcon, IconString = "\uF1AD;" },
-                new KTIcon { Id = 0, Name = "project1", Type = KTIconType.MDLFontIcon, IconString = "\uEDA8;" }, 
-                new KTIcon { Id = 0, Name = "project2", Type = KTIconType.MDLFontIcon, IconString = "\uEBC6;" },
-                new KTIcon { Id = 0, Name = "project3", Type = KTIconType.MDLFontIcon, IconString = "\uEC06;" },
+                new KTIcon { Id = 0, Name = "devtools", Type = KTIconType.MDLFontIcon, IconString = "\uEC7A" },
+                new KTIcon { Id = 0, Name = "design", Type = KTIconType.MDLFontIcon, IconString = "\uEB3C" },
+                new KTIcon { Id = 0, Name = "manage", Type = KTIconType.MDLFontIcon, IconString = "\uE178" },
+                new KTIcon { Id = 0, Name = "insider", Type = KTIconType.MDLFontIcon, IconString = "\uF1AD" },
+                new KTIcon { Id = 0, Name = "project1", Type = KTIconType.MDLFontIcon, IconString = "\uEDA8" }, 
+                new KTIcon { Id = 0, Name = "project2", Type = KTIconType.MDLFontIcon, IconString = "\uEBC6" },
+                new KTIcon { Id = 0, Name = "project3", Type = KTIconType.MDLFontIcon, IconString = "\uEC06" },
             };
 
             ctx.Activities = new List<KTActivityType>()

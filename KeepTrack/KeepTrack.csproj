@@ -123,12 +123,26 @@
     <Compile Include="Components\Controllers\AppLoader.cs" />
     <Compile Include="Components\Controllers\TestAppContextManager.cs" />
     <Compile Include="Components\Controllers\IAppContextManager.cs" />
+    <Compile Include="Components\Controls\ActivitySettingsControl.xaml.cs">
+      <DependentUpon>ActivitySettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Controls\IconsSettingsControl.xaml.cs">
+      <DependentUpon>IconsSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Converters\NullToBoolConverter.cs" />
     <Compile Include="Components\Pages\LoadingPage.xaml.cs">
       <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Pages\ProjectsPage.xaml.cs">
+      <DependentUpon>ProjectsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Components\Pages\TimeTrackingPage.xaml.cs">
+      <DependentUpon>TimeTrackingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\TemplateSelectors\KTIconTypeTemplateSelector.cs" />
     <Compile Include="Components\ViewModels\Data\KTActivityTypeViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTIconViewModel.cs" />
     <Compile Include="Components\ViewModels\Data\KTProjectViewModel.cs" />
@@ -138,6 +152,9 @@
     <Compile Include="Components\ViewModels\Data\KTTimelineViewModel.cs" />
     <Compile Include="Components\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Views\KTIconView.xaml.cs">
+      <DependentUpon>KTIconView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -161,7 +178,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Components\Controls\ActivitySettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Controls\IconsSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\Pages\LoadingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Pages\ProjectsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +201,22 @@
     <Page Include="Components\Pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Components\Pages\TimeTrackingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\Views\KTIconView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Dark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +246,9 @@
       <Project>{db26435a-dd09-4316-b6e4-bff8283d031b}</Project>
       <Name>KeepTrack.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Style\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
