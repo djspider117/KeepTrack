@@ -10,15 +10,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource SettingsPageBackground}">
 
-    <Grid >
+    <Grid Margin="0,30,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Settings" VerticalAlignment="Center" FontSize="34" FontWeight="Light" Margin="20,0,0,0"/>
+        <TextBlock Text="Settings" VerticalAlignment="Center" FontSize="34" FontWeight="Light" Margin="10,0,0,0"/>
 
-        <Pivot Grid.Row="1" Margin="10,0,0,0">
+        <Pivot Grid.Row="1">
             <PivotItem Header="General Settings"/>
             <PivotItem Header="Global Icons">
                 <controls:IconsSettingsControl />

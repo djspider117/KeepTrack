@@ -15,6 +15,7 @@
                           Stretch="UniformToFill"/>
         <NavigationView x:Name="nvMainNav"
                         PaneTitle="Menu"
+                        IsBackButtonVisible="Collapsed"
                         SelectionChanged="nvMainNav_SelectionChanged">
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Calendar" Content="Time Tracking" Tag="time_track"/>
